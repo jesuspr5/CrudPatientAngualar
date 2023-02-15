@@ -1,0 +1,39 @@
+.btn-group{
+    display: flex;
+   align-items: center;
+   text-align: center;
+   justify-content: center;
+   padding-left: 10em;
+   padding-right: 10em;
+
+    
+    
+    }
+    .btn-salir{
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        position: relative;
+       
+    }
+    
+    .btn{
+      
+        margin: 1em;
+        
+    }
+
+    input{
+        border-radius: 5px;
+        border-color: darkcyan;
+        padding-left:0.2em;
+        margin: 0.5em;
+    }
+    label{
+        font-weight: bold;
+    }
+    .form-group{
+padding-left: 10em;
+padding-right: 10em;
+    }

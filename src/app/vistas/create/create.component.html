@@ -1,5 +1,129 @@
 <app-header></app-header>
 <div class="container">
-    <p>create works!</p> 
+  <div class="btn-salir">
+    <button type=" button" class="btn btn-dark " (click)="salir()"> Salir </button>
+
+ </div>
+  <form [formGroup]="newForm" (ngSubmit)="postForm(newForm.value)">
+  
+        <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" class="form-control" id="nombre"
+            placeholder="Ingrese Nombre"
+            formControlName="nombre"
+                   required
+                 >
+                  
+                   <!-- <div [hidden]="name.valid || name.pristine"
+                   class="alert alert-danger">
+                el nombre es requerido
+              </div> -->
+          </div>
+        <div class="form-group">
+            <label for="name">Correo</label>
+            <input type="text" class="form-control" id="correo"
+            placeholder="Ingrese Correo"
+            formControlName="correo"
+                   required
+                 >
+                  
+                   <!-- <div [hidden]="name.valid || name.pristine"
+                   class="alert alert-danger">
+                el nombre es requerido
+              </div> -->
+          </div>
+        <div class="form-group">
+            <label for="name">Dni</label>
+            <input type="text" class="form-control" id="dni"
+            placeholder="Ingrese DNI"
+            formControlName="dni"
+                   required
+                 >
+                  
+                   <!-- <div [hidden]="name.valid || name.pristine"
+                   class="alert alert-danger">
+                el nombre es requerido
+              </div> -->
+          </div>
+        <div class="form-group">
+            <div class="col">
+                <label for="name">Dirreccion</label>
+                <input type="text" class="form-control" id="direccion"
+                placeholder="Ingrese direccion"
+                formControlName="direccion"
+                       required
+                     >
+            </div>
+           
+                  
+                   <!-- <div [hidden]="name.valid || name.pristine"
+                   class="alert alert-danger">
+                el nombre es requerido
+              </div> -->
+          </div>
+        <div class="form-group">
+            <label for="name">Codigo postal</label>
+            <input type="text" class="form-control" id="codigoPostal"
+            placeholder="Ingrese Codigo postal"
+            formControlName="codigoPostal"
+                   required
+                 >
+                  
+                   <!-- <div [hidden]="name.valid || name.pristine"
+                   class="alert alert-danger">
+                el nombre es requerido
+              </div> -->
+          </div>
+        <div class="form-group">
+            <label for="name">Genero</label>
+            <input type="text" class="form-control" id="Genero"
+            placeholder="Ingrese Genero"
+            formControlName="genero"
+                   required
+                 >
+                  
+                   <!-- <div [hidden]="name.valid || name.pristine"
+                   class="alert alert-danger">
+                el nombre es requerido
+              </div> -->
+          </div>
+        <div class="form-group">
+            <label for="name">Telefono</label>
+            <input type="text" class="form-control" id="telefono"
+            placeholder="Ingrese telefono"
+            formControlName="telefono"
+                   required
+                 >
+                  
+                   <!-- <div [hidden]="name.valid || name.pristine"
+                   class="alert alert-danger">
+                el nombre es requerido
+              </div> -->
+          </div>
+        <div class="form-group">
+            <label for="name">Fecha de nacimiento</label>
+            <input type="text" class="form-control" id="fechaNacimiento"
+            placeholder="Ingrese fecha de Nacimiento"
+            formControlName="fechaNacimiento"
+                   required
+                 >
+                  
+                   <!-- <div [hidden]="name.valid || name.pristine"
+                   class="alert alert-danger">
+                el nombre es requerido
+              </div> -->
+          </div>
+         
+          <br><br>
+         <div class="btn-group">
+          <button type="submit" class="btn btn-primary  rounded">Guardar</button>
+         </div>
+        
+       
+       
+
+  </form>
+
 </div>
-<app-footer></app-footer>
+
+  <app-footer></app-footer> 

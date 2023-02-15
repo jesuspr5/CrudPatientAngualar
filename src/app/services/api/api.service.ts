@@ -32,4 +32,25 @@ export class ApiService {
     let direccion = this.url + "pacientes?id=" + id;
     return this.http.get<pacienteI>(direccion);
   }
+  putPatient(form:pacienteI):Observable<ResponseI>{
+    let direccion =this.url + "pacientes";
+    return this.http.put<ResponseI>(direccion,form);
+  }
+ 
+  delete(form:pacienteI):Observable<ResponseI>{
+    let direccion = this.url + "pacientes"; 
+    let Options = {
+      headers: new HttpHeaders({
+      'content-Type': 'application/json'
+    }),
+    body:form
+  }
+    return this.http.delete<ResponseI>(direccion, Options)
+  }
+  postPatient(form:pacienteI):Observable<ResponseI>{
+
+    let direccion = this.url + "pacientes";
+    return this.http.post<ResponseI>(direccion,form)
+  }
 }
+
