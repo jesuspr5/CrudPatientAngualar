@@ -1,0 +1,7 @@
+.navbar{
+    height: 100px;
+    width: 100%;
+    background-color: rgb(110, 180, 242);
+    color: black;
+    font-weight: bold;
+}
