@@ -10,16 +10,56 @@
 
     <!-- Login Form -->
     <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
-      <input type="text" id="login" class="fadeIn second" formControlName="usuario" placeholder="login">
-      <input type="password" id="password" class="fadeIn third" formControlName="password" placeholder="password">
-      <input type="submit" class="fadeIn fourth" value="Log In">
+      <input type="text" id="login" class="fadeIn second" formControlName="usuario" placeholder="usuario">
+      <input type="password" id="password" class="fadeIn third" formControlName="password" placeholder="contraseña">
+      <input type="submit" class="fadeIn fourth"  value="Log In">
+     
     </form>
 
+    <div class="row mb-4">
+      <div class="col d-flex justify-content-center">
+        <!-- Checkbox -->
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+          <label class="form-check-label" for="form2Example31"> Recuerdame </label>
+        </div>
+      </div>
+  
+      <div class="col">
+        <!-- Simple link -->
+        <a href="#!">Olvido su contraseña?</a>
+      </div>
+    </div>
+
+   
     <!-- Remind Passowrd -->
     <div class="alert alert-danger" *ngIf="errorStatus">
       <p>{{errorMsj}}</p>
     </div>
-
+    <div class="text-center">
+      <p>Not a member? <a href="#!">Register</a></p>
+      <p>or sign up with:</p>
+      <button type="button" class="btn btn-link btn-floating mx-1">
+        <i class="fab fa-facebook-f"></i>
+      </button>
+  
+      <button type="button" class="btn btn-link btn-floating mx-1">
+        <i class="fab fa-google"></i>
+      </button>
+  
+      <button type="button" class="btn btn-link btn-floating mx-1">
+        <i class="fab fa-twitter"></i>
+      </button>
+  
+      <button type="button" class="btn btn-link btn-floating mx-1">
+        <i class="fab fa-github"></i>
+       
+      </button>
+      
+    </div>
   </div>
+  <!-- Register buttons -->
+
+  
 </div>
     

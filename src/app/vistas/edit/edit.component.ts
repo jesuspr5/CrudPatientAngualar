@@ -58,10 +58,13 @@ export class EditComponent implements OnInit {
     return localStorage.getItem('token')
   }
   postForm(form: any){
+  
   this.api.putPatient(form).subscribe(data=> {
     let respuesta:ResponseI = data;
     if(respuesta.status == "ok"){
       this.alertas.showSucces('datos modificados','Hecho');
+      setTimeout(() => {this.router.navigate(['dashboard'])}, 2000)
+     
     }else
     this.alertas.showError(respuesta.result.error_msg,'Error');
     
@@ -74,7 +77,7 @@ export class EditComponent implements OnInit {
       let respuesta:ResponseI = data;
     if(respuesta.status == "ok"){
       this.alertas.showSucces('paciente eliminado','Hecho');
-      this.router.navigate(['dashboard']);
+      setTimeout(() => {this.router.navigate(['dashboard'])}, 2000)
     }else
     this.alertas.showError(respuesta.result.error_msg,'Error');
     })

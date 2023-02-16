@@ -10,13 +10,13 @@ padding-left: 10em;
 
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content:flex-start;
     position: relative;
    
 }
 
 .btn{
-  
+    width: 5vw;
     margin: 1em;
     
 }

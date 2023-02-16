@@ -13,19 +13,21 @@ import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
+    
     AppComponent,
     HeaderComponent,
     FooterComponent,
     routingComponent
   ],
   imports: [
+
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule, // required animations module
-    ToastrModule.forRoot(), // ToastrModule added
+    ToastrModule.forRoot() // ToastrModule added
   ],
   providers: [],
   bootstrap: [AppComponent]
