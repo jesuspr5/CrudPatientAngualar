@@ -62,8 +62,8 @@ export class EditComponent implements OnInit {
   this.api.putPatient(form).subscribe(data=> {
     let respuesta:ResponseI = data;
     if(respuesta.status == "ok"){
-      this.alertas.showSucces('datos modificados','Hecho');
-      setTimeout(() => {this.router.navigate(['dashboard'])}, 2000)
+      this.alertas.showSucces('datos modificados','Exito');
+      setTimeout(() => {this.router.navigate(['dashboard'])}, 1000)
      
     }else
     this.alertas.showError(respuesta.result.error_msg,'Error');
@@ -76,8 +76,8 @@ export class EditComponent implements OnInit {
     this.api.delete(datos).subscribe(data=>{
       let respuesta:ResponseI = data;
     if(respuesta.status == "ok"){
-      this.alertas.showSucces('paciente eliminado','Hecho');
-      setTimeout(() => {this.router.navigate(['dashboard'])}, 2000)
+      this.alertas.showSucces('paciente eliminado','Exito');
+      setTimeout(() => {this.router.navigate(['dashboard'])}, 1000)
     }else
     this.alertas.showError(respuesta.result.error_msg,'Error');
     })

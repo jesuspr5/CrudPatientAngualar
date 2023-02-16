@@ -37,7 +37,13 @@ export class CreateComponent implements OnInit {
 
   postForm(form:any){
   this.api.postPatient(form).subscribe(data =>{
-    console.log(data)
+    let respuesta:ResponseI = data;
+    if(respuesta.status == "ok"){
+      this.alertas.showSucces('paciente creado','Exito');
+      setTimeout(() => {this.router.navigate(['dashboard'])}, 1000)
+     
+    }else
+    this.alertas.showError(respuesta.result.error_msg,'Error');
   })
   }
   salir(){
