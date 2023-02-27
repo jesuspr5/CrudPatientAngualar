@@ -1,0 +1,22 @@
+.icon{
+    display: flex;
+    flex-direction: row;
+   justify-content: space-around;
+   
+}
+
+.add{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    position: relative;
+}
+
+.icono1{
+   color: blue;
+   
+}
+.icono2{
+   background-color: red;
+    
+ }

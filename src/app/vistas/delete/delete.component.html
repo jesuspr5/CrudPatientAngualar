@@ -7,14 +7,15 @@
 
   </div>
  
-  <form [formGroup]="editForm" (ngSubmit)="postForm(editForm.value)">
+  <form  [formGroup]="editForm" (ngSubmit)="postForm(editForm.value)">
   
         <div class="form-group">
             <label for="name">Nombre</label>
             <input type="text" class="form-control" id="nombre"
             placeholder="Ingrese Nombre"
             formControlName="nombre"
-                   required
+                 readonly 
+                 
                  >
                   
                    <!-- <div [hidden]="name.valid || name.pristine"
@@ -27,7 +28,8 @@
             <input type="text" class="form-control" id="correo"
             placeholder="IngreseCorreo"
             formControlName="correo"
-                   required
+            readonly
+                 
                  >
                   
                    <!-- <div [hidden]="name.valid || name.pristine"
@@ -40,7 +42,7 @@
             <input type="text" class="form-control" id="dni"
             placeholder="Ingrese DNI"
             formControlName="dni"
-                   required
+            readonly
                  >
                   
                    <!-- <div [hidden]="name.valid || name.pristine"
@@ -54,7 +56,7 @@
                 <input type="text" class="form-control" id="direccion"
                 placeholder="Ingrese direccion"
                 formControlName="direccion"
-                       required
+                readonly
                      >
             </div>
            
@@ -69,7 +71,7 @@
             <input type="text" class="form-control" id="codigoPostal"
             placeholder="Ingrese Codigo postal"
             formControlName="codigoPostal"
-                   required
+            readonly
                  >
                   
                    <!-- <div [hidden]="name.valid || name.pristine"
@@ -82,7 +84,7 @@
             <input type="text" class="form-control" id="Genero"
             placeholder="Ingrese Genero"
             formControlName="genero"
-                   required
+            readonly
                  >
                   
                    <!-- <div [hidden]="name.valid || name.pristine"
@@ -95,7 +97,7 @@
             <input type="text" class="form-control" id="telefono"
             placeholder="Ingrese telefono"
             formControlName="telefono"
-                   required
+            readonly
                  >
                   
                    <!-- <div [hidden]="name.valid || name.pristine"
@@ -108,7 +110,8 @@
             <input type="text" class="form-control" id="fechaNacimiento"
             placeholder="Ingrese fecha de Nacimiento"
             formControlName="fechaNacimiento"
-                   required
+            readonly
+                   
                  >
                   
                    <!-- <div [hidden]="name.valid || name.pristine"
@@ -120,8 +123,8 @@
        
        
           <div class="btn-group">
-            <button type="submit" class="btn btn-primary rounded">Actualizar</button>
-            <!-- <button type="button" class="btn btn-danger  rounded" (click)="eliminar()">Eliminar</button> -->
+            <!-- <button type="submit" class="btn btn-primary rounded">Actualizar</button> -->
+            <button type="button" class="btn btn-danger  rounded" (click)="eliminar()">Eliminar</button>
            
            </div>
 

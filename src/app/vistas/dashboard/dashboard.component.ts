@@ -15,7 +15,7 @@ export class DashboardComponent implements OnInit {
   pacientes:listaPacienteI[] | undefined;
 
   ngOnInit(): void {
-    this.api.getAllPatients(3).subscribe(data =>{
+    this.api.getAllPatients(1).subscribe(data =>{
       this.pacientes=data
       // console.log(data)
     })
@@ -29,5 +29,9 @@ export class DashboardComponent implements OnInit {
   newPatient(){
     this.router.navigate(['create'])
   }
+  deletePatient(id:any){
+    this.router.navigate(['delete',id])
+  }
+
 
 }

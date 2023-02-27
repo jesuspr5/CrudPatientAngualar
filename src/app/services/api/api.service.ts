@@ -26,6 +26,7 @@ export class ApiService {
   getAllPatients(page:number):Observable<listaPacienteI[]>{
     let direccion = this.url + "pacientes?page=" +page;
     return this.http.get<listaPacienteI[]>(direccion);
+    // return this.http.get<listaPacienteI[]>(`${this.url}'pacientes?page='${page}`);
   }
 
   getPatient(id:string):Observable<pacienteI>{

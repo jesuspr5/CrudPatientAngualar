@@ -5,6 +5,7 @@ import {DashboardComponent} from './vistas/dashboard/dashboard.component'
 import {CreateComponent} from './vistas/create/create.component'
 import {EditComponent} from './vistas/edit/edit.component'
 import { Routes, RouterModule } from '@angular/router';
+import { DeleteComponent } from './vistas/delete/delete.component';
 
 const routes: Routes = [
   { path:'', redirectTo: 'login', pathMatch: 'full' },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path:'dashboard', component:DashboardComponent},
   { path:'create', component:CreateComponent},
   { path:'edit/:id', component:EditComponent},
+  { path:'delete/:id', component:DeleteComponent},
 
 ]
 
@@ -41,5 +43,6 @@ export const routingComponent = [
   LoginComponent, 
   DashboardComponent, 
   CreateComponent,
-  EditComponent
+  EditComponent,
+  DeleteComponent
 ]

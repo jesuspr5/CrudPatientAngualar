@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Router, ActivatedRoute} from '@angular/router'
 import { ApiService } from '../../services/api/api.service'
 import { pacienteI } from '../../modelos/paciente.interface'
@@ -8,12 +7,11 @@ import {AlertasService } from '../../services/alertas/alertas.service'
 import { FormGroup, FormControl, Validators } from '@angular/forms'
 
 @Component({
-  selector: 'app-edit',
-  templateUrl: './edit.component.html',
-  styleUrls: ['./edit.component.css']
+  selector: 'app-delete',
+  templateUrl: './delete.component.html',
+  styleUrls: ['./delete.component.css']
 })
-export class EditComponent implements OnInit {
-
+export class DeleteComponent implements OnInit {
   constructor(private api:ApiService, private activerouter:ActivatedRoute, private router:Router,private alertas:AlertasService) { }
 
   datosPacientes:pacienteI | undefined;
@@ -30,6 +28,8 @@ export class EditComponent implements OnInit {
     pacienteId :  new FormControl(''), 
 
   })
+
+
 
   ngOnInit(): void {
     let pacienteid = this.activerouter.snapshot.paramMap.get('id')!;
@@ -53,7 +53,7 @@ export class EditComponent implements OnInit {
     // console.log(pacienteid)
     // console.log(token)
   }
-
+  
   getToken(){
     return localStorage.getItem('token')
   }
@@ -70,19 +70,20 @@ export class EditComponent implements OnInit {
     
   })
   }
-  // eliminar(){
+  eliminar(){
 
-  //   let datos:any = this.editForm.value;
-  //   this.api.delete(datos).subscribe(data=>{
-  //     let respuesta:ResponseI = data;
-  //   if(respuesta.status == "ok"){
-  //     this.alertas.showSucces('paciente eliminado','Exito');
-  //     setTimeout(() => {this.router.navigate(['dashboard'])}, 1000)
-  //   }else
-  //   this.alertas.showError(respuesta.result.error_msg,'Error');
-  //   })
-  // }
+    let datos:any = this.editForm.value;
+    this.api.delete(datos).subscribe(data=>{
+      let respuesta:ResponseI = data;
+    if(respuesta.status == "ok"){
+      this.alertas.showSucces('paciente eliminado','Exito');
+      setTimeout(() => {this.router.navigate(['dashboard'])}, 1000)
+    }else
+    this.alertas.showError(respuesta.result.error_msg,'Error');
+    })
+  }
   salir(){
     this.router.navigate(['dashboard'])
   }
 }
+
